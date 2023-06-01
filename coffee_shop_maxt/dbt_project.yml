@@ -5,11 +5,7 @@
 name: 'coffee_shop'
 version: '1.0.0'
 config-version: 2
-description: >
-      Lorem ipsum **dolor** sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat.
+
 # This setting configures which "profile" dbt uses for this project.
 profile: 'coffee_shop'
 
