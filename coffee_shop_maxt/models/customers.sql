@@ -1,10 +1,15 @@
+{{ config(
+    materialized = 'table'
+
+) }}
+
 with customers as 
   ( 
     select
       id,
       name,
       email
-    from `analytics-engineers-club.coffee_shop.customers`
+    from {{ source('coffee_shop', 'customers') }}
       
   ),
 
@@ -15,7 +20,7 @@ first_order as
       customer_id,
       min(created_at) first_order_at,
       count(id) as number_of_orders
-    from `analytics-engineers-club.coffee_shop.orders`
+    from {{ source('coffee_shop', 'orders') }}
     group by customer_id
 
 
