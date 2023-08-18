@@ -38,7 +38,7 @@ sources:
             tests:
               - unique
               - not_null
-
+              
        -  name: products
         columns: 
           - name: id
